@@ -38,8 +38,8 @@ def backup_config(device_ip: str) -> None:
     conn_handler = {
         "device_type": "cisco_ios",
         "ip": device_ip,
-        "username": USERNAME,
-        "password": PASSWORD,
+        "username": USERNAME,  # pylint: disable=E0606
+        "password": PASSWORD,  # pylint: disable=E0606
     }
     net_connect = ConnectHandler(**conn_handler)
     directory = "config_backup_files"
